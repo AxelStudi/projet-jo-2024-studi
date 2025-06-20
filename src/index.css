@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #0066cc;
+  --primary-red: #ee334e;
+  --primary-dark: #121f3d;
+  --gold: #d4af37;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --gray: #6c757d;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  @apply text-gray-800 bg-gray-50;
+}
+
+.btn {
+  @apply px-4 py-2 rounded font-medium transition-all duration-200 inline-flex items-center justify-center;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+}
+
+.btn-secondary {
+  @apply bg-red-500 text-white hover:bg-red-600 active:bg-red-700;
+}
+
+.btn-gold {
+  @apply bg-yellow-500 text-gray-900 hover:bg-yellow-600 active:bg-yellow-700;
+}
+
+.btn-outline {
+  @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 active:bg-gray-100;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300;
+}
+
+.card:hover {
+  @apply shadow-lg transform translate-y-[-4px];
+}
+
+.input {
+  @apply border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.navbar {
+  @apply bg-white shadow-md py-2 px-4 md:px-8;
+}
+
+.hero {
+  background: linear-gradient(rgba(18, 31, 61, 0.8), rgba(18, 31, 61, 0.9)), url('https://images.pexels.com/photos/236937/pexels-photo-236937.jpeg');
+  background-size: cover;
+  background-position: center;
+  @apply text-white;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.gold-text {
+  background: linear-gradient(90deg, #d4af37 0%, #f9e076 50%, #d4af37 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: shine 4s infinite linear;
+  @apply font-bold;
+}
+
+.container {
+  @apply mx-auto px-4 md:px-6 max-w-7xl;
+}
+
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-blue {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.badge-red {
+  @apply bg-red-100 text-red-800;
+}
+
+.badge-gold {
+  @apply bg-yellow-100 text-yellow-800;
+}
