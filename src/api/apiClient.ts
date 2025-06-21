@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useAuthStore } from '../stores/authStore';
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8000/api/v1',
+  baseURL: 'https://neighbouring-fina-axelstudi-848fdaf7.koyeb.app/api/v1',
   headers: {
     'Content-Type': 'application/json',
   },
