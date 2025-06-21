@@ -12,6 +12,7 @@ app = FastAPI(
 origins = [
     "http://localhost:8080",  # Port du client React en développement
     "http://localhost:5173",  # Au cas où vous changeriez
+    "https://projet-jo-2024.netlify.app", # URL du frontend déployé
 ]
 
 app.add_middleware(
